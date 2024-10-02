@@ -13,6 +13,8 @@ class CardTrail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData.light()
+          .copyWith(scaffoldBackgroundColor: const Color(0xff161621)),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
       initialBinding: BindingsBuilder(() {
