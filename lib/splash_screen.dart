@@ -17,9 +17,13 @@ class SplashScreen extends StatelessWidget {
         child: ScaleTransition(
           scale: splashController.animation, // Use the controller's animation
           child: RotationTransition(
-            turns: Tween(begin: 0.0, end: 1.0).animate(splashController.animation),
-            child: Image.asset('assets/images/splash_card.png',width: 200,
-            height: 200,),
+            turns:
+                Tween(begin: 0.0, end: 1.0).animate(splashController.animation),
+            child: Image.asset(
+              'assets/images/splash_card.png',
+              width: 200,
+              height: 200,
+            ),
           ),
         ),
       ),

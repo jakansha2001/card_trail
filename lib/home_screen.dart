@@ -87,9 +87,10 @@ class HomeScreen extends StatelessWidget {
                               top: 30,
                             ),
                             child: Obx(() => Text(
-                              homeController.cardAmount.value, // Reactive card amount
-                              style: cardTextHead,
-                            )),
+                                  homeController
+                                      .cardAmount.value, // Reactive card amount
+                                  style: cardTextHead,
+                                )),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
@@ -100,15 +101,17 @@ class HomeScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Obx(() => Text(
-                                  homeController.cardNumber.value, // Reactive card number
-                                  style: cardNumber,
-                                )),
+                                      homeController.cardNumber
+                                          .value, // Reactive card number
+                                      style: cardNumber,
+                                    )),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 40),
                                   child: Obx(() => Text(
-                                    homeController.expiryDate.value, // Reactive expiry date
-                                    style: cardDate,
-                                  )),
+                                        homeController.expiryDate
+                                            .value, // Reactive expiry date
+                                        style: cardDate,
+                                      )),
                                 ),
                               ],
                             ),

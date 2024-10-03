@@ -19,7 +19,10 @@ class TransactionScreen extends StatelessWidget {
       ),
       body: Obx(() {
         if (transactionController.isLoading.value) {
-          return const Center(child: CircularProgressIndicator(color: AppColors.white,));
+          return const Center(
+              child: CircularProgressIndicator(
+            color: AppColors.white,
+          ));
         }
 
         return SingleChildScrollView(

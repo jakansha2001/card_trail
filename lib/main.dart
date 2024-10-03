@@ -15,12 +15,14 @@ class CardTrail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData.light()
-          .copyWith(scaffoldBackgroundColor: const Color(0xff161621), bottomNavigationBarTheme: const BottomNavigationBarThemeData(     
-    selectedItemColor: AppColors.splashBackground,   // Color for the selected item
-  ),
-  textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
-  ),
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: const Color(0xff161621),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedItemColor:
+              AppColors.splashBackground, // Color for the selected item
+        ),
+        textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
+      ),
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
       initialBinding: BindingsBuilder(() {
