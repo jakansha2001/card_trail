@@ -75,7 +75,7 @@ flutter:
   #         weight: 700
 flutter_native_splash:
   color: "#CD3F2C"
-  image: assets/images/scapia.png
+  image: assets/images/splash_card.png
   android: true
   ios: true
   web: false
