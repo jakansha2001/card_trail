@@ -1,4 +1,4 @@
-import 'package:card_trail/core/widgets/month_header_widget.dart';
+import 'package:card_trail/core/widgets/month_header.dart';
 import 'package:card_trail/core/widgets/transaction_grid.dart';
 import 'package:card_trail/models/transaction.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +15,10 @@ class TransactionWidget extends StatelessWidget {
     int rows = 7;
     int columns = (reversedTransactions.length / rows).ceil();
 
-    List<String> monthHeaders =
-        _generateMonthHeaders(reversedTransactions, rows, columns);
+    List<String> monthHeaders = _generateMonthHeaders(reversedTransactions, rows, columns);
 
     double maxSpending = transactions.isNotEmpty
-        ? transactions
-            .map((t) => t.totalAmountSpent)
-            .reduce((a, b) => a > b ? a : b)
+        ? transactions.map((t) => t.totalAmountSpent).reduce((a, b) => a > b ? a : b)
         : 0;
 
     return SafeArea(
@@ -53,7 +50,7 @@ class TransactionWidget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        MonthHeaderWidget(monthHeaders: monthHeaders),
+                        MonthHeader(monthHeaders: monthHeaders),
                         const SizedBox(height: 5),
                         Expanded(
                           child: TransactionGrid(
@@ -75,8 +72,7 @@ class TransactionWidget extends StatelessWidget {
     );
   }
 
-  List<String> _generateMonthHeaders(
-      List<DailyTransactions> transactions, int rows, int columns) {
+  List<String> _generateMonthHeaders(List<DailyTransactions> transactions, int rows, int columns) {
     List<String> monthHeaders = [];
     for (int i = 0; i < columns; i++) {
       int actualIndex = i * rows;
