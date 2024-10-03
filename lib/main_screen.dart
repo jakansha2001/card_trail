@@ -9,7 +9,7 @@ class MainScreen extends StatelessWidget {
 
   final List<Widget> pages = [
     HomeScreen(),
-    TransactionsScreen(),
+    const TransactionScreen(),
   ];
 
   MainScreen({super.key});
@@ -23,7 +23,8 @@ class MainScreen extends StatelessWidget {
             onTap: navController.changePage,
             items: const [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(icon: Icon(Icons.credit_card), label: 'Transactions'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.credit_card), label: 'Transactions'),
             ],
           )),
     );
