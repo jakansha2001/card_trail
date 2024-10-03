@@ -57,4 +57,4 @@ To run the Fortune Cookie App on your local machine, follow these steps:
     - Transaction Screen: Visualize transactions over the past year in a grid format and view recent transactions in a scrollable list.
  
 ## Documentation
-For more detailed information on the approach, design decisions, and development considerations for the CardTrail app, please refer to the [documentation](https://docs.google.com/document/d/1pq32rnQ0VL7ly5oTwVvc80Lbi69wzEnqWgmF9kYjxRk/edit?usp=sharing)
+For more detailed information on the approach, design decisions, and development considerations for the CardTrail app, please refer to the [documentation](https://docs.google.com/document/d/1pq32rnQ0VL7ly5oTwVvc80Lbi69wzEnqWgmF9kYjxRk/edit?usp=sharing).
