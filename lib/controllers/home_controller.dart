@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  var cardAmount = '\$1,500,000'.obs; // Mock card amount
+  var cardNumber = '**** **** **** 1996'.obs; // Mock card number
+  var expiryDate = '08/30'.obs; // Mock expiry date
   var imgUrl = 'assets/images/bg1.png'.obs;
   var btn1 = true.obs;
   var btn2 = false.obs;
