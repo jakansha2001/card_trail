@@ -1,4 +1,5 @@
 import 'package:card_trail/controllers/transaction_controller.dart';
+import 'package:card_trail/core/constants/app_colors.dart';
 import 'package:card_trail/core/widgets/recent_transactions_widget.dart';
 import 'package:card_trail/core/widgets/transaction_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class TransactionScreen extends StatelessWidget {
       ),
       body: Obx(() {
         if (transactionController.isLoading.value) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator(color: AppColors.white,));
         }
 
         return SingleChildScrollView(
