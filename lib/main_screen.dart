@@ -18,15 +18,20 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(() => pages[navController.selectedIndex.value]),
-      bottomNavigationBar: Obx(() => BottomNavigationBar(
-            currentIndex: navController.selectedIndex.value,
-            onTap: navController.changePage,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.credit_card), label: 'Transactions'),
-            ],
-          )),
+      bottomNavigationBar: Obx(() => Theme(
+        data: Theme.of(context).copyWith(
+          splashFactory: NoSplash.splashFactory,
+        ),
+        child: BottomNavigationBar(
+              currentIndex: navController.selectedIndex.value,
+              onTap: navController.changePage,
+              items: const [
+                BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.credit_card_rounded), label: 'Transactions'),
+              ],
+            ),
+      )),
     );
   }
 }

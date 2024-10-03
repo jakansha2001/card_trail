@@ -2,34 +2,10 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Flutter: Launch Android",
+        "name": "Flutter: Launch Card Trail",
         "request": "launch",
         "type": "dart",
         "program": "lib/main.dart",
-        // "args": [
-        //   "-d",
-        //   "android"
-        // ]
-      },
-      {
-        "name": "Flutter: Launch iOS",
-        "request": "launch",
-        "type": "dart",
-        "program": "lib/main.dart",
-        // "args": [
-        //   "-d",
-        //   "ios"
-        // ]
-      },
-      {
-        "name": "Flutter: Launch Web",
-        "request": "launch",
-        "type": "dart",
-        "program": "lib/main.dart",
-        // "args": [
-        //   "-d",
-        //   "chrome"
-        // ]
       },
     ]
   }

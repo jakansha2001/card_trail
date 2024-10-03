@@ -2,7 +2,7 @@
     <application
         android:label="card_trail"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@drawable/card">
         <activity
             android:name=".MainActivity"
             android:exported="true"

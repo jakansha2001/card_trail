@@ -12,7 +12,7 @@ class SplashController extends GetxController
     super.onInit();
     // Initialize the animation controller
     animationController = AnimationController(
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 2),
       vsync: this,
     )..forward();
 
@@ -22,7 +22,7 @@ class SplashController extends GetxController
     );
 
     // Navigate to HomeScreen after animation
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Get.off(() => MainScreen());
     });
   }

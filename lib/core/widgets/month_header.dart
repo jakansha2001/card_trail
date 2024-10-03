@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MonthHeaderWidget extends StatelessWidget {
-  const MonthHeaderWidget({super.key, required this.monthHeaders});
+class MonthHeader extends StatelessWidget {
+  const MonthHeader({super.key, required this.monthHeaders});
 
   final List<String> monthHeaders;
 

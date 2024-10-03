@@ -51,13 +51,13 @@ class HomeScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   style: subHeading,
-                ).paddingSymmetric(horizontal: 10),
+                ).paddingSymmetric(horizontal: 15),
                 const SizedBox(
                   height: 50,
                 ),
                 Obx(
                   () => Container(
-                    width: double.infinity,
+                    width: 450,
                     height: 234,
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -86,10 +86,10 @@ class HomeScreen extends StatelessWidget {
                               left: 40.0,
                               top: 30,
                             ),
-                            child: Text(
-                              '\$1,500,000',
+                            child: Obx(() => Text(
+                              homeController.cardAmount.value, // Reactive card amount
                               style: cardTextHead,
-                            ),
+                            )),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
@@ -97,18 +97,18 @@ class HomeScreen extends StatelessWidget {
                               top: 45.0,
                             ),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  '**** **** **** 1996',
+                                Obx(() => Text(
+                                  homeController.cardNumber.value, // Reactive card number
                                   style: cardNumber,
-                                ),
-                                const Spacer(),
+                                )),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 40),
-                                  child: Text(
-                                    '08/30',
+                                  child: Obx(() => Text(
+                                    homeController.expiryDate.value, // Reactive expiry date
                                     style: cardDate,
-                                  ),
+                                  )),
                                 ),
                               ],
                             ),
@@ -152,37 +152,6 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                // const SizedBox(
-                //   height: 70,
-                // ),
-                // ElevatedButton(
-                //   style: saveCard,
-                //   onPressed: () {
-                //     ScaffoldMessenger.of(context).showSnackBar(
-                //       SnackBar(
-                //         //backgroundColor: Color(0xff161621),
-                //         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                //         content: Text(
-                //           'Your Card is Saved ✅',
-                //           style: snackbarText,
-                //           textAlign: TextAlign.center,
-                //         ),
-                //       ),
-                //     );
-                //   },
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(
-                //       left: 100.0,
-                //       right: 100.0,
-                //       top: 20,
-                //       bottom: 20,
-                //     ),
-                //     child: Text(
-                //       'Save My Card',
-                //       style: saveCardTextStyle,
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ),
