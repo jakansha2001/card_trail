@@ -5,12 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  final HomeController homeController = Get.put(HomeController());
-
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final HomeController homeController = Get.put(HomeController());
     return SingleChildScrollView(
       child: SafeArea(
         child: Center(

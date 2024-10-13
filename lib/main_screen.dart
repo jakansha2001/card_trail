@@ -8,7 +8,7 @@ class MainScreen extends StatelessWidget {
   final NavigationController navController = Get.find();
 
   final List<Widget> pages = [
-    HomeScreen(),
+    const HomeScreen(),
     const TransactionScreen(),
   ];
 
